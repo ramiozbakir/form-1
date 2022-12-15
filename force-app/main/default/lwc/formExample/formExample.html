@@ -1,0 +1,42 @@
+
+<template>
+    <lightning-card >
+        <lightning-card title="Form-1"></lightning-card>
+
+    <lightning-input
+        type="text"
+        name="textInput"
+        label="Name"
+        value={formData.textInput}
+        onchange={handleChange}
+        required
+    ></lightning-input>
+       
+    <lightning-input
+        type="checkbox"
+        name="checkboxInput"
+        label="Terms and conditions"
+        checked={formData.checkboxInput}
+        onchange={handleChange}
+        required
+    ></lightning-input>
+   
+    <lightning-combobox
+        name="dropdownInput"
+        label="Select your Country"
+        options={picklistOptions}
+        value={formData.dropdownInput}
+        onchange={handleChange}
+        required
+    ></lightning-combobox>
+
+    <lightning-button label="Save" onclick={fetchAccounts}></lightning-button>
+  
+    <lightning-button label="Clear" onclick={handleClear} variant="neutral"></lightning-button>
+    <lightning-datatable
+        data={accounts}
+        columns={columns}
+        key-field="textInput"
+    ></lightning-datatable>
+    </lightning-card>
+</template>

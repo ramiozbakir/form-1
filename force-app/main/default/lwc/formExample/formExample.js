@@ -11,7 +11,6 @@ const COLUMNS = [
     { label: 'Country', fieldName: 'picklistField', type: 'text' }
 ];  
 
-
 export default class FormExample extends LightningElement {
     picklistOptions=dropdownOptions;
     accounts;  
